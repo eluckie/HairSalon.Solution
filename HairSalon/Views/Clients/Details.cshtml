@@ -8,7 +8,9 @@
 <h5>Stylist: @Model.Stylist.Name</h5>
 <h5>Upcoming appointments: <em>WORK IN PROGRESS</em></h5>
 <hr>
-<p>@Html.ActionLink($"Edit {Model.Name}", "Edit")</p>
+<p>@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.ClientId})</p>
+<p>@Html.ActionLink($"Delete {Model.Name}", "Delete", new { id = Model.ClientId})</p>
+<hr>
 <p>@Html.ActionLink($"Back to {Model.Stylist.Name}", "Details", "Stylists", new { id = Model.Stylist.StylistId})</p>
 <p>@Html.ActionLink("Back to all stylists", "Index", "Stylists")</p>
 <p>@Html.ActionLink("Back home", "Index", "Home")</p>
