@@ -20,12 +20,19 @@ This application is intended to help a salon owner keep track of all their styli
 
 ### Paths
 **/** Home page welcoming user to the salon. Contains links to view or add stylists, and view or add clients
+
 **/Stylists** Stylists main page showing full list of current stylists and their specialties
+
 **/Clients** Clients main page showing full list of current clients and their respective stylists
+
 **/{Stylists or Clients}/Create** A form to add a new client or stylist (depending on which link was clicked)
+
 **/Stylists/Details/{id}** A page that displays the selected stylist's name, specialty, hire date, and any current clients. Includes links to add a new client to this stylist, edit this stylist, delete this stylist, or return back to the full list of stylists or home page
+
 **/{Stylists or Clients}/Edit/{id}** A form to edit the current client or stylist (depending on which link was clicked). Both forms include links that say _Nevermind_ and take the user back to the respective main pages, and a link instead go back to the main welcome page
+
 **/{Stylists or Clients}/Delete/{id}** A page confirming you'd like to delete the selected Stylist or Client. Clicking the _Take them away_ button officially deletes them, and re-routes the user back to the respective main pages displaying the full list of stylists or clients. If user clicks the _Nevermind_ link instead of the button, the selected client or stylist is not deleted, and the user is re-routed back to the respective main page
+
 **/Clients/Details/{id}** A page that displays the selected client's name, stylist, and any upcoming appointments _**{WORK-IN-PROGRESS}**_
 
 ## Setup/Installation Requirements
@@ -35,7 +42,7 @@ This application is intended to help a salon owner keep track of all their styli
 3. In the command line, run the command ``dotnet watch run`` to compile and execute the webpage in Development mode
 * Optionally, you can run the command ``dotnet build`` to compile the program without running it
 
-### Recreating the Database
+### Connecting the Database
 1. Within the production level of this directory, called _**HairSalon**_, create a new file called **appsettings.json**
 2. Input the following code into your _**appsettings.json**_ file
 ![screenshot of appsettings.json code](HairSalon/wwwroot/img/appsettingstext.png)
