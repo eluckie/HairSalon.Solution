@@ -1,9 +1,11 @@
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
-namespace ProjectName.Models
+namespace HairSalon.Models
 {
-  public class ClassName
+  public class HairSalonContext : DbContext
   {
-    public string PropertyName { get; set; }
+    public DbSet<Item> Stylists { get; set; }
+    public DbSet<Category> Clients { get; set; }
+    public HairSalonContext(DbContextOptions options) : base(options) { }
   }
 }
