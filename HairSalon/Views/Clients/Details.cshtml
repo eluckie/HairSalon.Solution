@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+@using HairSalon.Models
+
+<h2>@Model.Name's Details</h2>
+<h5>Stylist: @Model.Stylist.Name</h5>
+<h5>Upcoming appointments: <em>WORK IN PROGRESS</em></h5>
+<hr>
+
+<p>@Html.ActionLink($"Back to {Model.Stylist.Name}", "Details", "Stylists", new { id = Model.Stylist.StylistId})</p>
+<p>@Html.ActionLink("Back to all stylists", "Index", "Stylists")</p>
+<p>@Html.ActionLink("Back home", "Index", "Home")</p>
