@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+@using HairSalon.Models
+
+<h2>Edit stylist</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.StylistId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  <br><br>
+  @Html.LabelFor(model => model.Specialty)
+  @Html.TextBoxFor(model=> model.Specialty)
+  <br><br>
+  <p>
+    Hire Date
+    <input id="HireDate" type="date">
+  </p>
+  <input type="submit" value="Update stylist">
+  <hr>
+}
+
+<p>@Html.ActionLink("Nevermind", "Index")</p>
+<p>@Html.ActionLink("Back home", "Index", "Home")</p>
