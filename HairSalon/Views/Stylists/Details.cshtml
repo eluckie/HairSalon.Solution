@@ -6,7 +6,9 @@
 @using HairSalon.Models
 
 <h2>@Model.Name's Details</h2>
-
+<h5>Specialty: @Model.Specialty</h5>
+<h5>Hire Date: @Model.HireDate.ToString("MM/dd/yyyy")</h5>
+<hr>
 @if (@Model.Clients.Count == 0)
 {
   <h5>No clients have been added to @Model.Name yet!</h5>
