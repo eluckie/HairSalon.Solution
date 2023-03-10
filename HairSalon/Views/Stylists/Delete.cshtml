@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+<h2>Are you sure you want to delete @Model.Name?</h2>
+<br>
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Take them away">
+}
+
+<hr>
+<p>@Html.ActionLink("Nevermind", "Index")</p>
+<p>@Html.ActionLink("Back home", "Index", "Home")</p>
