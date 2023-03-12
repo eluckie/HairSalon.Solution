@@ -37,22 +37,35 @@ This application is intended to help a salon owner keep track of all their styli
 
 ## Setup/Installation Requirements
 
+### Recreating the Database
 1. Clone this repository to your desktop
-2. In your computer's terminal, navigate to the production level of this directory called _**HairSalon**_
-3. In the command line, run the command ``dotnet watch run`` to compile and execute the webpage in Development mode
-* Optionally, you can run the command ``dotnet build`` to compile the program without running it
+2. Open MySQL Workbench and navigate to the _Administration_ tab
+3. Under the _Management_ label, click **Data Import/Restore**
+4. Under the _Import Options_ tab, select the circle for **Import from Self-Contained File** and click the small button with two dots after the text box
+5. In the window that pops up, navigate to the root level of this project, titled _**HairSalon.Solution**_ and select the file titled **elizabeth_luckie.sql**
+6. Under the _Default Target Schema_ tab, select the _New_ button and create a name for your new database
+7. Verify your database is named properly and click the _Start Import_ button. Once complete, you will receive a confirmation from MySQL
+8. Once your import is complete, navigate to the _Schemas_ tab at the top of the page. Once you click the small refresh icon in the upper right corner, your new database should populate within the list
+* You will be able to click the new database name, and click the tables tab to verify that both the _clients_ and _stylists_ tables were imported properly 
 
 ### Connecting the Database
-1. Within the production level of this directory, called _**HairSalon**_, create a new file called **appsettings.json**
-2. Input the following code into your _**appsettings.json**_ file
+9. Return to your computer's terminal application to your newly cloned project
+10. Within the production level of this directory, called _**HairSalon**_, create a new file called **appsettings.json**
+11. Input the following code into your _**appsettings.json**_ file
 ![screenshot of appsettings.json code](HairSalon/wwwroot/img/appsettingstext.png)
-* Replace _[ YOUR-DB-NAME ]_ with the name of the database from MySQL Workbench: _**elizabeth_luckie**_
+* Replace _[ YOUR-DB-NAME ]_ with the name of the database you just imported to MySQL Workbench
 * Replace _[ YOUR-USER-HERE ]_ with your username for MySQL Workbench
 * Replace _[ YOUR-PASSWORD-HERE ]_ with your password for MySQL Workbench
 * Make sure you save all changes you've made to the file
 * If you are planning on pushing your work back to GitHub to a new repository, _make sure to commit your .gitignore file first so that your sensitive information is kept private_
 
-### Database Schemas
+### Viewing the Active Project
+12. In your computer's terminal, navigate to the production level of this directory called _**HairSalon**_
+13. In the command line, run the command ``dotnet watch run`` to compile and execute the webpage in Development mode
+* This will also run the command ``dotnet restore`` to restore all necessary packages for the project. You may also choose to run this command separately before ``dotnet watch run`` to manually restore the project
+* Optionally, you can run the command ``dotnet build`` to compile the program without running it
+
+### Database Schema
 ![screenshot of tables used in database](HairSalon/wwwroot/img/schema.png)
 
 ## Known Bugs
