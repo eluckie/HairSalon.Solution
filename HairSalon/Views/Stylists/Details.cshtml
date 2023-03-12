@@ -6,25 +6,27 @@
 @using HairSalon.Models
 
 <h2>@Model.Name's Details</h2>
-<h5>Specialty: <span id="specialty">@Model.Specialty</span></h5>
-<h5>Hire Date: @Model.HireDate.ToString("MM/dd/yyyy")</h5>
-<hr>
-@if (@Model.Clients.Count == 0)
-{
-  <h5>No clients have been added to @Model.Name yet!</h5>
-}
-else
-{
-  <h5>Clients</h5>
-  <ul>
-    @foreach(Client client in Model.Clients)
-    {
-      <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId})</li>
-    }
-  </ul>
-}
+<div id="stylist-details">
+  <h5>Specialty: <span id="specialty">@Model.Specialty</span></h5>
+  <h5>Hire Date: @Model.HireDate.ToString("MM/dd/yyyy")</h5>
+</div>
+<div id="client-list">
+  @if (@Model.Clients.Count == 0)
+  {
+    <h5>No clients have been added to @Model.Name yet!</h5>
+  }
+  else
+  {
+    <h5>Clients</h5>
+    <ul>
+      @foreach(Client client in Model.Clients)
+      {
+        <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId})</li>
+      }
+    </ul>
+  }
+</div> 
 
-<hr>
 <p id="client-links">@Html.ActionLink($"Add a new client to {Model.Name}", "Create", "Clients")</p>
 <p id="stylist-links">@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.StylistId})</p>
 <p id="stylist-links">@Html.ActionLink($"Delete {Model.Name}", "Delete", new { id = Model.StylistId})</p>

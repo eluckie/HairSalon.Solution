@@ -60,4 +60,18 @@ form {
 
 #button {
   background-color: #7b8bf2;
+  color:white;
+}
+
+#stylist-details {
+  padding:20px;
+  border:2px dotted black;
+  width:400px;
+  margin:20px;
+  text-align:center;
+}
+
+#client-list {
+  padding:10px;
+  margin:20px;
 }
