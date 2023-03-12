@@ -5,7 +5,10 @@
 @model HairSalon.Models.Client
 
 <h2>@Model.Name's Details</h2>
-<h5 id="stylist-details">Stylist: @Model.Stylist.Name</h5>
+<div id="stylist-details">
+  <h5>@Model.Pronouns</h5>
+  <h5>Stylist: <span id="specialty">@Model.Stylist.Name</span></h5>
+</div>
 
 <hr>
 <p id="client-links">@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.ClientId})</p>

@@ -6,7 +6,7 @@
 
 @if (Model.Count == 0)
 {
-  <h5>No stylists have been added yet!</h5>
+  <h5 id="empty">No stylists have been added yet!</h5>
 }
 else
 {
@@ -14,11 +14,11 @@ else
   <ul>
     @foreach (Stylist stylist in Model)
     {
-      <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId}) | <span id="specialty">@stylist.Specialty</span></li>
+      <li><span id="name-link">@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId})</span> | <span id="specialty">@stylist.Specialty</span></li>
     }
   </ul>
 }
-<hr>
+
 <p id="stylist-links">@Html.ActionLink("Add a new stylist", "Create", "Stylists")</p>
 <p id="client-links">@Html.ActionLink("Add a new client", "Create", "Clients")</p>
 <p id="client-links">@Html.ActionLink("View all clients", "Index", "Clients")</p>

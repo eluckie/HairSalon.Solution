@@ -75,3 +75,15 @@ form {
   padding:10px;
   margin:20px;
 }
+
+#name-link {
+  font-size: large;
+}
+
+#empty {
+  padding:20px;
+  border:2px dotted black;
+  width:600px;
+  margin:20px;
+  text-align:center;
+}
