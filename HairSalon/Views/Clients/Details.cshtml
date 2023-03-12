@@ -6,8 +6,10 @@
 
 <h2>@Model.Name's Details</h2>
 <h5>Stylist: @Model.Stylist.Name</h5>
-<h5>Upcoming appointments: <em>WORK IN PROGRESS</em></h5>
+<h5>Upcoming appointment: <em>WORK IN PROGRESS</em></h5>
+
 <hr>
+<p>@Html.ActionLink($"Add a new appointment for {Model.Name}", "Appt")</p>
 <p>@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.ClientId})</p>
 <p>@Html.ActionLink($"Delete {Model.Name}", "Delete", new { id = Model.ClientId})</p>
 <hr>
