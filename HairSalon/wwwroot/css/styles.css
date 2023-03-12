@@ -4,6 +4,7 @@ h1 {
 
 h2 {
   color:rgb(228, 121, 137);
+  padding:10px;
 }
 
 a {
@@ -21,7 +22,19 @@ body {
   background-position:240px 440px;
 }
 
-p {
+#specialty {
+  color:rgb(228, 121, 137);
+}
+
+#stylist-links {
+  padding:20px;
+  margin:10px;
+  background: linear-gradient(to top left, #d86999e0 0%, #ecd0d6 65%);
+  width:180px;
+  text-align:center;
+}
+
+#client-links {
   padding:20px;
   margin:10px;
   background: linear-gradient(to top left, #f7513ee0 0%, #f4d9aa 65%);
@@ -29,7 +42,22 @@ p {
   text-align:center;
 }
 
-#specialty {
-  font-size:large;
-  color:rgb(228, 121, 137);
+#home-link {
+  padding: 10px;
+}
+
+#notice {
+  padding:10px;
+  border:2px dotted black;
+  margin:20px;
+  width:850px;
+  text-align:center;
+}
+
+form {
+  padding:20px;
+}
+
+#button {
+  background-color: #7b8bf2;
 }

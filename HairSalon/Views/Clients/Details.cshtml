@@ -6,13 +6,11 @@
 
 <h2>@Model.Name's Details</h2>
 <h5>Stylist: @Model.Stylist.Name</h5>
-<h5>Upcoming appointment: <em>WORK IN PROGRESS</em></h5>
 
 <hr>
-@* <p>@Html.ActionLink($"Add a new appointment for {Model.Name}", "Appt")</p> *@
-<p>@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.ClientId})</p>
-<p>@Html.ActionLink($"Delete {Model.Name}", "Delete", new { id = Model.ClientId})</p>
+<p id="client-links">@Html.ActionLink($"Edit {Model.Name}", "Edit", new { id = Model.ClientId})</p>
+<p id="client-links">@Html.ActionLink($"Delete {Model.Name}", "Delete", new { id = Model.ClientId})</p>
 <hr>
-<p>@Html.ActionLink($"Back to {Model.Stylist.Name}", "Details", "Stylists", new { id = Model.Stylist.StylistId})</p>
-<p>@Html.ActionLink("Back to all stylists", "Index", "Stylists")</p>
-<p>@Html.ActionLink("Back home", "Index", "Home")</p>
+<p id="stylist-links">@Html.ActionLink($"Back to {Model.Stylist.Name}", "Details", "Stylists", new { id = Model.Stylist.StylistId})</p>
+<p id="stylist-links">@Html.ActionLink("Back to all stylists", "Index", "Stylists")</p>
+<h5 id="home-link">@Html.ActionLink("Back home", "Index", "Home")</h5>

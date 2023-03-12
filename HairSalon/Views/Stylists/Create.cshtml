@@ -17,9 +17,10 @@
   @Html.LabelFor(model => model.HireDate)
   @Html.EditorFor(model => model.HireDate)
   <br><br>
-  <input type="submit" value="Add stylist">
+  <input type="submit" value="Add stylist" id="button">
+  <br><br>
   <hr>
 }
 
-<p>@Html.ActionLink("Nevermind", "Index")</p>
-<p>@Html.ActionLink("Back home", "Index", "Home")</p>
+<h5 id="home-link">@Html.ActionLink("Nevermind", "Index")</h5>
+<h5 id="home-link">@Html.ActionLink("Back home", "Index", "Home")</h5>

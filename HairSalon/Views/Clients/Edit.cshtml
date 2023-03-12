@@ -16,8 +16,8 @@
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
   <br><br>
-  <input type="submit" value="Update client">
+  <input type="submit" value="Update client" id="button">
 }
 
-<p>@Html.ActionLink("Nevermind", "Index")</p>
-<p>@Html.ActionLink("Back home", "Index", "Home")</p>
+<h5 id="home-link">@Html.ActionLink("Nevermind", "Index")</h5>
+<h5 id="home-link">@Html.ActionLink("Back home", "Index", "Home")</h5>

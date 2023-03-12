@@ -5,7 +5,9 @@
 @model HairSalon.Models.Client
 
 <h2>Add a new client</h2>
-<h5>NOTE: you <em>must</em> include a stylist when adding a new client. If no stylists have been added yet, please add one @Html.ActionLink("here", "Create", "Stylists")</h5>
+<div id="notice">
+  <p>NOTE: you <em>must</em> include a stylist when adding a new client. If no stylists have been added yet, please add one @Html.ActionLink("here", "Create", "Stylists")</p>
+</div>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
@@ -14,9 +16,9 @@
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
   <br><br>
-  <input type="submit" value="Add client">
+  <input type="submit" value="Add client" id="button">
 }
 <hr>
-<p>@Html.ActionLink("View all clients", "Index")</p>
-<p>@Html.ActionLink("View all stylists", "Index", "Stylists")</p>
-<p>@Html.ActionLink("Back home", "Index", "Home")</p>
+<p id="client-links">@Html.ActionLink("View all clients", "Index")</p>
+<p id="stylist-links">@Html.ActionLink("View all stylists", "Index", "Stylists")</p>
+<h5 id="home-link">@Html.ActionLink("Back home", "Index", "Home")</h5>
