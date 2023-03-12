@@ -18,6 +18,8 @@
 
 This application is intended to help a salon owner keep track of all their stylists and salon clients. The owner is able to see a list of all current stylists, see details for each specific stylist, add new stylists to the system, and add new clients to a specific stylist.
 
+_{EXPORT THE DATABASE TO .SOLUTION WHEN FINISHED & FULLY FLESH OUT DESCRIPTION}_
+
 ### Paths
 **/** Home page welcoming user to the salon. Contains links to view or add stylists, and view or add clients
 
@@ -68,6 +70,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 * Add functionality to add appointments to a stylist & check to ensure no conflicting appointments
 * Add functionality to track how much stylists are paid for each appointment
 * Add styling
+* Add functionality to delete clients & stylists
 
 ## License
 
