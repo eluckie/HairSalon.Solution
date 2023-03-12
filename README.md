@@ -70,7 +70,6 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 * Add functionality to add appointments to a stylist & check to ensure no conflicting appointments
 * Add functionality to track how much stylists are paid for each appointment
 * Add styling
-* Add functionality to delete clients & stylists
 
 ## License
 
