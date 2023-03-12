@@ -1,0 +1,35 @@
+h1 {
+  color:#e64703
+}
+
+h2 {
+  color:rgb(228, 121, 137);
+}
+
+a {
+  color:#7b8bf2;
+}
+
+a:hover {
+  color:rgb(228, 121, 137);
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image:url('/img/hairtools.jpg');
+  background-repeat:no-repeat;
+  background-position:240px 440px;
+}
+
+p {
+  padding:20px;
+  margin:10px;
+  background: linear-gradient(to top left, #f7513ee0 0%, #f4d9aa 65%);
+  width:180px;
+  text-align:center;
+}
+
+#specialty {
+  font-size:large;
+  color:rgb(228, 121, 137);
+}
