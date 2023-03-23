@@ -52,7 +52,11 @@ This application is intended to help a salon owner keep track of all their styli
 9. Return to your computer's terminal application to your newly cloned project
 10. Within the production level of this directory, called _**HairSalon**_, create a new file called **appsettings.json**
 11. Input the following code into your _**appsettings.json**_ file
-![screenshot of appsettings.json code](HairSalon/wwwroot/img/appsettingstext.png)
+``{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DB-NAME];uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}``
 * Replace _[ YOUR-DB-NAME ]_ with the name of the database you just imported to MySQL Workbench
 * Replace _[ YOUR-USER-HERE ]_ with your username for MySQL Workbench
 * Replace _[ YOUR-PASSWORD-HERE ]_ with your password for MySQL Workbench
